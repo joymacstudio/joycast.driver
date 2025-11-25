@@ -16,3 +16,6 @@ configs/credentials.env
 # Dist outputs
 dist/build/
 dist/candidate/
+
+# Uninstaller build artifacts
+uninstaller/*.app
