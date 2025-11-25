@@ -19,3 +19,4 @@ dist/candidate/
 
 # Uninstaller build artifacts
 uninstaller/*.app
+uninstaller/*.zip

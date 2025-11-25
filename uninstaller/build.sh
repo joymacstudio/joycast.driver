@@ -11,6 +11,7 @@ PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 # Paths
 SOURCE="$SCRIPT_DIR/Uninstall JoyCast Driver.applescript"
 OUTPUT="$SCRIPT_DIR/Uninstall JoyCast Driver.app"
+OUTPUT_ZIP="$SCRIPT_DIR/Uninstall JoyCast Driver.zip"
 ICON="$PROJECT_ROOT/assets/joycast.icns"
 CREDENTIALS_FILE="$PROJECT_ROOT/configs/credentials.env"
 
@@ -113,8 +114,16 @@ fi
 # Touch to refresh Finder
 touch "$OUTPUT"
 
+# Create distribution ZIP
+echo -e "${YELLOW}Creating distribution ZIP...${NC}"
+rm -f "$OUTPUT_ZIP"
+ditto -c -k --keepParent "$OUTPUT" "$OUTPUT_ZIP"
+echo -e "${GREEN}✓ ZIP created${NC}"
+
 echo -e "\n${BOLD}${GREEN}=== Build Complete ===${NC}"
-echo -e "Output: $OUTPUT"
+echo -e "Output:"
+echo -e "  📦 $OUTPUT"
+echo -e "  📦 $OUTPUT_ZIP"
 
 # Show signature info
 echo -e "\n${GRAY}Signature info:${NC}"
