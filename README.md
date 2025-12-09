@@ -19,7 +19,7 @@ This project is licensed under **GNU General Public License v3.0 (GPL-3.0)** - t
 
 ```bash
 # Clone with submodules
-git clone --recursive https://github.com/joycastai/joycast.driver.git
+git clone --recursive https://github.com/joymacstudio/joycast.driver.git
 cd joycast.driver
 
 # Load credentials (required for signing)
